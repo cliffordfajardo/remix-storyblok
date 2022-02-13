@@ -1,0 +1,25 @@
+# app
+/.cache
+/app/styles
+/public/build
+
+# netlify
+/.netlify
+/netlify/functions/server/build
+
+# storybook
+/storybook-static
+
+# node
+/node_modules
+
+# npm
+package-lock.json
+
+# yarn
+.yarnrc.yml
+/.yarn
+yarn.lock
+
+# system
+.DS_Store
