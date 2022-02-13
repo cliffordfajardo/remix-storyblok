@@ -1,13 +1,13 @@
 const StoryblokHeadingText = ({ content }) => {
     return (
-        <>
-            <div className="border border-dashed border-red-500 p-4 text-center text-red-500">
-                <p className="mb-0 text-sm uppercase">
+        <div className="alert rounded-box mb-2 bg-neutral text-neutral-content shadow-lg">
+            <div className="flex-1">
+                <label>
                     The component <span className="font-bold">{content}</span>{" "}
                     has not been created yet.
-                </p>
+                </label>
             </div>
-        </>
+        </div>
     );
 };
 

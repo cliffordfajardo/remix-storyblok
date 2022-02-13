@@ -9,6 +9,8 @@ import { storyblokGraphQL, useStoryblok } from "../utilities/storyblok";
 
 import StoryblokUtilities from "../components/storyblok/utilities";
 
+import TemplateDefault from "~/components/layout/templates/default";
+
 import { HOME_QUERY } from "../../graphql/storyblok/home";
 
 export let loader = async () => {
@@ -47,30 +49,28 @@ export default function Index() {
     dayjs.extend(localizedFormat);
 
     return (
-        <div className="mx-auto max-w-screen-lg border border-black">
+        <TemplateDefault>
             <div>
-                <pre className="h-40 overflow-x-hidden overflow-y-scroll bg-black font-mono text-xs text-white">
-                    {JSON.stringify(data, null, 2)}
-                </pre>
+                <div className="indicator block w-auto">
+                    <div className="indicator-item -mt-px -mr-px !transform-none">
+                        <p className="badge badge-lg w-max">
+                            Last updated{" "}
+                            {dayjs(story.published_at).format("LL")}
+                        </p>
+                    </div>
+                    <div className="mockup-code rounded-box mb-2 max-h-40 overflow-scroll bg-neutral text-neutral-content shadow-lg">
+                        <pre className="text-sm">
+                            <code>{JSON.stringify(data, null, 2)}</code>
+                        </pre>
+                    </div>
+                </div>
                 <div className="mb-4">
                     <h1 className="text-center font-bold uppercase text-blue-500">
                         {story.name}
                     </h1>
-                    <p className="text-center text-xs uppercase text-gray-500">
-                        First published{" "}
-                        {dayjs(story.first_published_at).format("LL")}
-                    </p>
-                    <p className="text-center text-xs uppercase text-gray-500">
-                        Last updated {dayjs(story.published_at).format("LL")}
-                    </p>
-                    <div className="text-center">
-                        <Link to="/about-us" className="uppercase">
-                            About Us
-                        </Link>
-                    </div>
                 </div>
             </div>
             {StoryblokUtilities(story.content)}
-        </div>
+        </TemplateDefault>
     );
 }

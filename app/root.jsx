@@ -26,7 +26,7 @@ export function meta() {
 
 export default function App() {
     return (
-        <html lang="en">
+        <html lang="en" data-theme="wireframe">
             <head>
                 <meta charSet="utf-8" />
                 <meta
