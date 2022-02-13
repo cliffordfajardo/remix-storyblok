@@ -15,13 +15,14 @@
         "storybook:build": "build-storybook",
         "storybook:dev": "start-storybook -p 6006",
         "x:postinstall": "remix setup node",
-        "y:server": "yarn run build:run && yarn run prettier:check"
+        "y:server": "yarn run remix setup node && yarn run build:css && yarn run build:app && yarn run prettier:check"
     },
     "dependencies": {
         "@netlify/functions": "^0.11.0",
         "@remix-run/netlify": "^1.1.3",
         "@remix-run/react": "^1.1.3",
         "@storyblok/js": "^1.0.1",
+        "axios": "^0.26.0",
         "concurrently": "^7.0.0",
         "dayjs": "^1.10.7",
         "graphql": "^16.3.0",
