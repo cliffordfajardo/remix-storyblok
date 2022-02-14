@@ -72,9 +72,9 @@ export default function Index() {
                             <h1 className="mb-5 text-5xl font-bold">
                                 {story.content.title}
                             </h1>
-                            <p className="mb-5">
+                            <div className="mb-8">
                                 {render(story.content.intro)}
-                            </p>
+                            </div>
                             <div className="flex flex-col justify-center space-y-4 lg:flex-row lg:space-y-0 lg:space-x-4">
                                 <a
                                     href="https://github.com/black-tape-project/remix-storyblok"

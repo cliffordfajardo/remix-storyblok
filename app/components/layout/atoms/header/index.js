@@ -5,7 +5,7 @@ const LayoutHeader = () => {
         <div className="navbar rounded-box mb-2 bg-neutral text-neutral-content shadow-lg">
             <div className="mx-2 flex-1 px-2">
                 <Link to="/" className="text-lg font-bold uppercase">
-                    remix-starter
+                    remix-storyblok
                 </Link>
             </div>
             <div className="mx-2 hidden flex-none px-2 lg:flex">
