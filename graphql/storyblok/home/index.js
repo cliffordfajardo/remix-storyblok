@@ -14,11 +14,13 @@ export const HOME_QUERY = gql`
                 _editable
                 _uid
                 component
+                title
+                intro
+                body
                 seo_description
                 seo_follow
                 seo_index
                 seo_title
-                body
             }
         }
     }

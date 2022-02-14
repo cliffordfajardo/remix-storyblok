@@ -63,7 +63,7 @@ export default function Index() {
                             {dayjs(story.published_at).format("LL")}
                         </p>
                     </div>
-                    <div className="mockup-code rounded-box mb-2 max-h-40 min-w-0 overflow-scroll bg-neutral text-sm text-neutral-content shadow-lg">
+                    <div className="mockup-code rounded-box mb-2 max-h-40 min-w-0 overflow-scroll bg-base-100 text-sm text-neutral-content shadow-lg">
                         <pre>
                             <code>{JSON.stringify(data, null, 2)}</code>
                         </pre>
@@ -81,14 +81,6 @@ export default function Index() {
                                 quasi. In deleniti eaque aut repudiandae et a id
                                 nisi.
                             </p>
-                            <a
-                                href="https://github.com/black-tape-project/remix-storyblok"
-                                className="btn btn-primary"
-                                target="_blank"
-                                rel="noopener"
-                            >
-                                View Repository on Github
-                            </a>
                         </div>
                     </div>
                 </div>

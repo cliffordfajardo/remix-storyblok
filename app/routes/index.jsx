@@ -7,6 +7,8 @@ import localizedFormat from "dayjs/plugin/localizedFormat";
 
 import { storyblokGraphQL, useStoryblok } from "../utilities/storyblok";
 
+import { render } from "storyblok-rich-text-react-renderer";
+
 import StoryblokUtilities from "../components/storyblok/utilities";
 
 import TemplateDefault from "~/components/layout/templates/default";
@@ -58,7 +60,7 @@ export default function Index() {
                             {dayjs(story.published_at).format("LL")}
                         </p>
                     </div>
-                    <div className="mockup-code rounded-box mb-2 max-h-40 min-w-0 overflow-scroll bg-neutral text-sm text-neutral-content shadow-lg">
+                    <div className="mockup-code rounded-box mb-2 max-h-40 min-w-0 overflow-scroll bg-base-100 text-sm text-neutral-content shadow-lg">
                         <pre>
                             <code>{JSON.stringify(data, null, 2)}</code>
                         </pre>
@@ -66,24 +68,26 @@ export default function Index() {
                 </div>
                 <div className="hero rounded-box mb-2 bg-base-200 text-neutral-content shadow-lg">
                     <div className="hero-content text-center md:p-8 lg:p-16">
-                        <div className="max-w-md">
+                        <div className="md:max-w-[90%] lg:max-w-[70%]">
                             <h1 className="mb-5 text-5xl font-bold">
-                                {story.name}
+                                {story.content.title}
                             </h1>
                             <p className="mb-5">
-                                Provident cupiditate voluptatem et in. Quaerat
-                                fugiat ut assumenda excepturi exercitationem
-                                quasi. In deleniti eaque aut repudiandae et a id
-                                nisi.
+                                {render(story.content.intro)}
                             </p>
-                            <a
-                                href="https://github.com/black-tape-project/remix-storyblok"
-                                className="btn btn-primary"
-                                target="_blank"
-                                rel="noopener"
-                            >
-                                View Repository on Github
-                            </a>
+                            <div className="flex flex-col justify-center space-y-4 lg:flex-row lg:space-y-0 lg:space-x-4">
+                                <a
+                                    href="https://github.com/black-tape-project/remix-storyblok"
+                                    className="btn btn-primary"
+                                    target="_blank"
+                                    rel="noopener"
+                                >
+                                    View repository on github
+                                </a>
+                                <Link to="about-us" className="btn">
+                                    Find out more information
+                                </Link>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -6,16 +6,18 @@
     "scripts": {
         "build:app": "remix build",
         "build:css": "postcss styles/index.css -o app/styles/index.css --env production",
-        "build:run": "concurrently -k -c \"blue,magenta,yellow\" \"yarn run build:css\" \"yarn run build:app\"",
+        "build:run": "yarn run build:css && yarn run build:app",
         "dev:app": "cross-env NODE_ENV=development netlify dev",
         "dev:css": "postcss styles/index.css -o app/styles/index.css -w",
         "dev:run": "concurrently -c \"blue,magenta,yellow\" \"yarn run prettier:check\" \"yarn run dev:css\" \"yarn run dev:app\"",
-        "prettier:check": "yarn prettier --check .",
-        "prettier:write": "yarn prettier --write .",
+        "netlify:preview": "netlify deploy",
+        "netlify:production": "netlify deploy --prod",
+        "prettier:check": "prettier --check .",
+        "prettier:write": "prettier --write .",
         "storybook:build": "build-storybook",
         "storybook:dev": "start-storybook -p 6006",
         "x:postinstall": "remix setup node",
-        "y:server": "yarn run remix setup node && yarn run build:css && yarn run build:app && yarn run prettier:check"
+        "y:server": "TODO"
     },
     "dependencies": {
         "@netlify/functions": "^0.11.0",
