@@ -1,5 +1,3 @@
-import { Link } from "remix";
-
 const LayoutFooter = () => {
     return (
         <footer className="footer footer-center rounded-box bg-neutral p-2 text-neutral-content shadow-lg md:p-8 lg:p-16">
