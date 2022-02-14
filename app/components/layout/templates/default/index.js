@@ -1,3 +1,4 @@
+import LayoutFooter from "../../atoms/footer";
 import LayoutHeader from "../../atoms/header";
 
 const TemplateDefault = ({ children }) => {
@@ -5,6 +6,7 @@ const TemplateDefault = ({ children }) => {
         <div className="container my-2 lg:my-8">
             <LayoutHeader />
             {children}
+            <LayoutFooter />
         </div>
     );
 };

@@ -11,7 +11,9 @@ import { render } from "storyblok-rich-text-react-renderer";
 
 import StoryblokUtilities from "../components/storyblok/utilities";
 
-import TemplateDefault from "~/components/layout/templates/default";
+import TemplateDefault from "../components/layout/templates/default";
+
+import StoryblokContentStats from "../components/storyblok/content/stats";
 
 import { HOME_QUERY } from "../../graphql/storyblok/home";
 
@@ -91,6 +93,7 @@ export default function Index() {
                         </div>
                     </div>
                 </div>
+                <StoryblokContentStats />
             </div>
             {StoryblokUtilities(story.content)}
         </TemplateDefault>
