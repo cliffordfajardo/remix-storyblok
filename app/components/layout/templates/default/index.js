@@ -2,7 +2,7 @@ import LayoutHeader from "../../atoms/header";
 
 const TemplateDefault = ({ children }) => {
     return (
-        <div className="my-8 mx-auto max-w-screen-lg">
+        <div className="container my-2 lg:my-8">
             <LayoutHeader />
             {children}
         </div>
