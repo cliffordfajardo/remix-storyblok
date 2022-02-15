@@ -1,6 +1,17 @@
 module.exports = {
-    trailingComma: "es5",
-    tabWidth: 4,
+    importOrder: [
+        "react",
+        "remix",
+        "graphql",
+        "components",
+        "utilities",
+        "^[./]",
+        "<THIRD_PARTY_MODULES>",
+    ],
+    importOrderSeparation: true,
+    importOrderSortSpecifiers: true,
+    importOrderCaseInsensitive: true,
     semi: true,
     singleQuote: false,
+    tabWidth: 4,
 };

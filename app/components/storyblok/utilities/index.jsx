@@ -4,7 +4,6 @@ import StoryblokPlaceholder from "../utilities/placeholder";
 
 import StoryblokContentHeadingText from "../content/heading";
 import StoryblokContentRichtext from "../content/richtext";
-
 import StoryblokTemplateIndex from "../templates/index";
 
 const Components = {

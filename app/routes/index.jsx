@@ -1,21 +1,18 @@
-import { useLoaderData, json, Link } from "remix";
+import { render } from "storyblok-rich-text-react-renderer";
 
-import LRUCache from "lru-cache";
+import { json, Link, useLoaderData } from "remix";
 
-import dayjs from "dayjs";
-import localizedFormat from "dayjs/plugin/localizedFormat";
+import { HOME_QUERY } from "../../graphql/storyblok/home";
+
+import TemplateDefault from "../components/layout/templates/default";
+import StoryblokContentStats from "../components/storyblok/content/stats";
+import StoryblokUtilities from "../components/storyblok/utilities";
 
 import { storyblokGraphQL, useStoryblok } from "../utilities/storyblok";
 
-import { render } from "storyblok-rich-text-react-renderer";
-
-import StoryblokUtilities from "../components/storyblok/utilities";
-
-import TemplateDefault from "../components/layout/templates/default";
-
-import StoryblokContentStats from "../components/storyblok/content/stats";
-
-import { HOME_QUERY } from "../../graphql/storyblok/home";
+import dayjs from "dayjs";
+import localizedFormat from "dayjs/plugin/localizedFormat";
+import LRUCache from "lru-cache";
 
 export let loader = async () => {
     const options = {

@@ -3,7 +3,7 @@ const LayoutFooter = () => {
         <footer className="footer footer-center rounded-box bg-neutral p-2 text-neutral-content shadow-lg md:p-8 lg:p-16">
             <div>
                 <div className="grid grid-flow-col gap-4">
-                    <a href="/" target="_blank" rel="noopener">
+                    <a rel="noopener" href="/" target="_blank">
                         Social
                     </a>
                     <a href="/" target="_blank" rel="noopener">

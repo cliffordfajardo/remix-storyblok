@@ -1,17 +1,15 @@
-import { useLoaderData, json, Link } from "remix";
+import { json, useLoaderData } from "remix";
 
-import LRUCache from "lru-cache";
+import { SLUG_QUERY } from "../../graphql/storyblok/slug";
 
-import dayjs from "dayjs";
-import localizedFormat from "dayjs/plugin/localizedFormat";
+import StoryblokUtilities from "../components/storyblok/utilities";
+import TemplateDefault from "~/components/layout/templates/default";
 
 import { storyblokGraphQL, useStoryblok } from "../utilities/storyblok";
 
-import StoryblokUtilities from "../components/storyblok/utilities";
-
-import TemplateDefault from "~/components/layout/templates/default";
-
-import { SLUG_QUERY } from "../../graphql/storyblok/slug";
+import dayjs from "dayjs";
+import localizedFormat from "dayjs/plugin/localizedFormat";
+import LRUCache from "lru-cache";
 
 export let loader = async ({ params }) => {
     const slug = params.slug;

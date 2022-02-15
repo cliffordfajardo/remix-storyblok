@@ -1,5 +1,4 @@
 import StoryblokEditable from "storyblok-react";
-
 import { render } from "storyblok-rich-text-react-renderer";
 
 const StoryblokContentRichtext = ({ content }) => {
