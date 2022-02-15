@@ -4,11 +4,13 @@ import StoryblokPlaceholder from "../utilities/placeholder";
 
 import StoryblokContentHeadingText from "../content/heading";
 import StoryblokContentRichtext from "../content/richtext";
+import StoryblokTemplateDefault from "../templates/default";
 import StoryblokTemplateIndex from "../templates/index";
 
 const Components = {
-    richtext: StoryblokContentRichtext,
     heading_text: StoryblokContentHeadingText,
+    richtext: StoryblokContentRichtext,
+    template_default: StoryblokTemplateDefault,
     template_index: StoryblokTemplateIndex,
 };
 
