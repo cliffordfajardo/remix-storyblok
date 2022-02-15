@@ -78,14 +78,17 @@ export default function Index() {
                             <div className="flex flex-col justify-center space-y-4 lg:flex-row lg:space-y-0 lg:space-x-4">
                                 <a
                                     href="https://github.com/black-tape-project/remix-storyblok"
-                                    className="btn btn-primary"
+                                    className="btn btn-primary rounded-btn"
                                     target="_blank"
                                     rel="noopener"
                                 >
                                     View repository on github{" "}
                                     <FiGithub className="ml-2" />
                                 </a>
-                                <Link to="about-us" className="btn">
+                                <Link
+                                    to="about-us"
+                                    className="btn btn-ghost rounded-btn"
+                                >
                                     Find out more information
                                 </Link>
                             </div>

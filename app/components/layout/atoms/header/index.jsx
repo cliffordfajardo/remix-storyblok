@@ -24,7 +24,7 @@ const LayoutHeader = () => {
                 </div>
             </div>
             <div className="flex-none">
-                <button className="btn btn-ghost rounded-btn btn-sm">
+                <button className="btn btn-primary rounded-btn btn-sm">
                     <FiMenu />
                 </button>
             </div>
