@@ -10,6 +10,7 @@ This is just a simple list of things needed to do, and not little TODO reminders
 -   [ ] Finish adding in a PWA / Service Worker
 -   [ ] Add ESLint
 -   [ ] Figure out the best way to detect preview mode of storyblok
+-   [ ] Fix regex for import ordering
 
 ## Upload Repo
 

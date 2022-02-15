@@ -1,3 +1,5 @@
+import { FiMenu } from "react-icons/fi";
+
 import { Link } from "remix";
 
 const LayoutHeader = () => {
@@ -23,7 +25,7 @@ const LayoutHeader = () => {
             </div>
             <div className="flex-none">
                 <button className="btn btn-ghost rounded-btn btn-sm">
-                    Button
+                    <FiMenu />
                 </button>
             </div>
         </div>

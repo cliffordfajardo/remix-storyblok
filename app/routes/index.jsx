@@ -1,3 +1,4 @@
+import { FiGithub } from "react-icons/fi";
 import { render } from "storyblok-rich-text-react-renderer";
 
 import { json, Link, useLoaderData } from "remix";
@@ -81,7 +82,8 @@ export default function Index() {
                                     target="_blank"
                                     rel="noopener"
                                 >
-                                    View repository on github
+                                    View repository on github{" "}
+                                    <FiGithub className="ml-2" />
                                 </a>
                                 <Link to="about-us" className="btn">
                                     Find out more information
