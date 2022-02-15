@@ -6,5 +6,15 @@
             "~/*": ["./app/*"]
         }
     },
-    "exclude": [".cache", ".yarn", "node_modules"]
+    "exclude": [
+        ".cache",
+        ".git",
+        ".yarn",
+        "app/styles",
+        "netlify/functions/server/build",
+        "node_modules",
+        "public/build",
+        "storybook-static",
+        "**/node_modules/*"
+    ]
 }

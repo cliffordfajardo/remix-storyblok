@@ -1,24 +1,24 @@
 # app
-/.cache
-/app/styles
-/public/build
+.cache
+app/styles
+public/build
 
 # netlify
-/.netlify
-/netlify/functions/server/build
+.netlify
+netlify/functions/server/build
 
 # storybook
-/storybook-static
+storybook-static
 
 # node
-/node_modules
+node_modules
 
 # npm
 package-lock.json
 
 # yarn
 .yarnrc.yml
-/.yarn
+.yarn
 yarn.lock
 
 # system
